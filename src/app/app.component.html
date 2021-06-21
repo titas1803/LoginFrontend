@@ -1,21 +1,22 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
-<router-outlet></router-outlet>
+<header class="jumbotron bg-warning mb-2 pb-2">
+  <h1>Angular Login Module</h1>
+  <h5>By Titas Sarkar and Soumendu Maitra</h5>
+  <div class="col-10 text-right" *ngIf="!storageService.loginflag"><a routerLink="/login"
+      class="btn btn-outline-secondary" style="cursor:pointer">Login</a></div>
+  <div class="col-10 text-right" *ngIf="storageService.loginflag">
+    <span class="text-dark">Hi, {{storageService.userId|number}}, </span>
+    <a (click)="doLogout()" class="btn btn-outline-secondary" style="cursor:pointer">Logout</a>
+  </div>
+</header>
+<article>
+  <nav class="col-8 mx-auto px-0">
+    <ul class="nav nav-tabs" role="tablist">
+      <li><a role="tab" href="#login" data-toggle="tab" routerLink='login' class="nav-link bg-warning text-white">Log In</a></li>
+      <li><a role="tab" href="#create" data-toggle="tab" routerLink='createaccount'
+          class="nav-link active bg-warning text-white">Sign Up</a></li>
+    </ul>
+  </nav>
+  <div class="card card-body bg-info col-8 mx-auto p-1">
+    <router-outlet class="tab-content bg-info"></router-outlet>
+  </div>
+</article>

@@ -1,3 +1,48 @@
-<p>
-  create-account works!
-</p>
+<section class="col-5 bg-warning mx-auto p-1 m-1 tab-pane active" id="create">
+  <h1 class="text-center">Create Account</h1>
+  <div *ngIf="msg!=undefined" class="alert border-0 alert-success" [ngStyle]="{'background-color': this.msgflag?'rgb(195, 255, 166)':'rgb(255, 181, 181)'}">{{msg}}</div>
+  <form #frm="ngForm" (ngSubmit)="create()">
+      <div class="mb-2">User Name</div>
+      <div class="mb-2"><input type="text" name="txtename" class="form-control" [(ngModel)]="userDto.userName" required
+              pattern="([a-zA-Z]|[a-zA-Z ]+[a-zA-Z])" #uname="ngModel" placeholder="Enter Name" /></div>
+      <div class="alert alert-danger" *ngIf="uname.invalid && uname.touched">
+          <div *ngIf="uname.errors?.required">Employee Name is required</div>
+          <div *ngIf="uname.errors?.pattern"> Employee Name must contain alphabet and can contain a space in between
+          </div>
+      </div>
+      <div class="mb-2">Contact No.</div>
+      <div class="mb-2"><input type="number" name="txtcont" class="form-control" [(ngModel)]="userDto.contactNo" required
+              #contact="ngModel" placeholder="Enter phone no." /></div>
+      <div class="alert alert-danger" *ngIf="contact.invalid && contact.touched">contact no. is required</div>
+
+      <div>Email Id</div>
+      <div class="mb-2"><input type="text" name="txtemail" class="form-control" [(ngModel)]="userDto.emailId" required pattern=email #email="ngModel"/></div>
+      <div class="alert alert-danger" *ngIf="email.invalid && email.touched">Enter Correct mail Id</div>
+      <div>
+          <div class="mb-2">Date Of Birth</div>
+          <div class="mb-2"><input type="date" name="txtdob" class="form-control" [(ngModel)]="userDto.userDob" required
+                  placeholder="dd-MM-yyyy" #edoj="ngModel" /></div>
+          <div class="alert alert-danger" *ngIf="edoj.invalid && edoj.touched">
+              <div *ngIf="edoj.errors?.required">Date of Joining is required</div>
+              <div *ngIf="edoj.errors?.pattern">Date of Joining must be in dd-MM-yyyy format</div>
+          </div>
+      </div>
+      <div>
+        <div>Address</div>
+        <div class="mb-2"><input type="text" name="txtadrs" class="form-control" [(ngModel)]="userDto.userAddress" required #address="ngModel"/></div>
+        <div class="alert alert-danger" *ngIf="address.invalid && address.touched">Address cant be empty</div>
+      </div>
+      <div>
+        <div>Location</div>
+        <div class="mb-2"><input type="text" name="txtadrs" class="form-control" [(ngModel)]="userDto.location" required #location="ngModel"/></div>
+        <div class="alert alert-danger" *ngIf="location.invalid && location.touched">Location cant be empty</div>
+      </div>
+      <div>
+        <div>Password</div>
+        <div><input type="password" name="txtpass" class="form-control" [(ngModel)]="userDto.password" required #pass="ngModel"></div>
+        <div class="alert alert-danger" *ngIf="pass.invalid && pass.touched">Password cant be empty</div>
+      </div>
+      <div class="mb-2"><input type="submit" class="btn btn-success text-white" value="Add Employee"
+              [disabled]="!frm.valid"></div>
+  </form>
+</section>
