@@ -7,12 +7,16 @@ import { AppComponent } from './app.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { ProductComponent } from './product/product.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateAccountComponent,
-    LoginComponent
+    LoginComponent,
+    ProductComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
