@@ -14,6 +14,7 @@ export class CreateAccountComponent implements OnInit {
   @ViewChild("frm")
   form!:NgForm;
   msgflag!:boolean
+  confPass:string;
 
   constructor(public userService:UserService) { }
 

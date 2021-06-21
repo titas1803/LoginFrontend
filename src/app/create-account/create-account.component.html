@@ -28,20 +28,26 @@
           </div>
       </div>
       <div>
-        <div>Address</div>
+        <div class="mb-2">Address</div>
         <div class="mb-2"><input type="text" name="txtadrs" class="form-control" [(ngModel)]="userDto.userAddress" required #address="ngModel"/></div>
         <div class="alert alert-danger" *ngIf="address.invalid && address.touched">Address cant be empty</div>
       </div>
       <div>
-        <div>Location</div>
-        <div class="mb-2"><input type="text" name="txtadrs" class="form-control" [(ngModel)]="userDto.location" required #location="ngModel"/></div>
+        <div class="mb-2">Location</div>
+        <div class="mb-2"><input type="text" aria-multiline="true" name="txtadrs" class="form-control" [(ngModel)]="userDto.location" required #location="ngModel"/></div>
         <div class="alert alert-danger" *ngIf="location.invalid && location.touched">Location cant be empty</div>
       </div>
       <div>
-        <div>Password</div>
-        <div><input type="password" name="txtpass" class="form-control" [(ngModel)]="userDto.password" required #pass="ngModel"></div>
+        <div class="mb-2">Password</div>
+        <div class="mb-2"><input type="password" name="txtpass" class="form-control" [(ngModel)]="userDto.password" required #pass="ngModel"></div>
         <div class="alert alert-danger" *ngIf="pass.invalid && pass.touched">Password cant be empty</div>
       </div>
+      <!-- <div>
+        <div class="mb-2">Confirm Password</div>
+        <div class="mb-2"><input type="password" name="txtpass" class="form-control" [(ngModel)]="confPass" required #confpass="ngModel" pattern="{{ pass.value }}"></div>
+        <div class="alert alert-danger" *ngIf="confpass.invalid && confpass.touched"> Confirm Password cant be empty</div>
+        <div class="alert alert-danger" *ngIf="confPass.errors?.pattern">Confirm Password should be same as password</div>
+      </div> -->
       <div class="mb-2"><input type="submit" class="btn btn-success text-white" value="Add Employee"
               [disabled]="!frm.valid"></div>
   </form>
