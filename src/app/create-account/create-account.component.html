@@ -15,7 +15,7 @@
               #contact="ngModel" placeholder="Enter phone no." /></div>
       <div class="alert alert-danger" *ngIf="contact.invalid && contact.touched">contact no. is required</div>
 
-      <div>Email Id</div>
+      <div class="mb-2">Email Id</div>
       <div class="mb-2"><input type="text" name="txtemail" class="form-control" [(ngModel)]="userDto.emailId" required pattern=email #email="ngModel"/></div>
       <div class="alert alert-danger" *ngIf="email.invalid && email.touched">Enter Correct mail Id</div>
       <div>
