@@ -9,6 +9,10 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { ProductComponent } from './product/product.component';
 import { UserComponent } from './user/user.component';
+import { ViewprodbyIdComponent } from './viewprodby-id/viewprodby-id.component';
+import { ViewprodbyNameComponent } from './viewprodby-name/viewprodby-name.component';
+import { ViewalluserComponent } from './viewalluser/viewalluser.component';
+import { ViewuserbyNameComponent } from './viewuserby-name/viewuserby-name.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { UserComponent } from './user/user.component';
     CreateAccountComponent,
     LoginComponent,
     ProductComponent,
-    UserComponent
+    UserComponent,
+    ViewprodbyIdComponent,
+    ViewprodbyNameComponent,
+    ViewalluserComponent,
+    ViewuserbyNameComponent
   ],
   imports: [
     BrowserModule,

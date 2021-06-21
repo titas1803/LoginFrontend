@@ -8,22 +8,22 @@ import { LoginDto } from './login-dto';
 })
 export class LoginService {
 
-  constructor(public http:HttpClient) { }
+  constructor(public http: HttpClient) { }
 
-  doLogin(login:LoginDto):Observable<any>{
+  doLogin(login: LoginDto): Observable<any> {
     return this.http.post("http://localhost:8082/loginmodule/login", login);
   }
 
-  doLogout():Observable<any>{
-    let token:string=JSON.parse(localStorage.getItem("userinfo")!).token;
+  doLogout(): Observable<any> {
+    let token: string = JSON.parse(localStorage.getItem("userinfo")!).token;
     console.log(token);
-    return this.http.get("http://localhost:8082/loginmodule/logout", {headers: new HttpHeaders({'token-id':token})});
+    return this.http.get("http://localhost:8082/loginmodule/logout", { headers: new HttpHeaders({ 'token-id': token }) });
   }
 
-  encryptString(pwd:string):string{
-    let str:string="";
-    for(let idx=0; idx<pwd.length; idx++){
-      str += (pwd.charCodeAt(idx)+3);
+  encryptString(pwd: string): string {
+    let str: string = "";
+    for (let idx = 0; idx < pwd.length; idx++) {
+      str += (pwd.charCodeAt(idx) + 3);
     }
     return str;
   }

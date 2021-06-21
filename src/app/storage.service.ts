@@ -5,14 +5,14 @@ import { Injectable } from '@angular/core';
 })
 export class StorageService {
 
-  msg?:string;
-  loginflag!:boolean;
-  userId!:number;
+  msg?: string;
+  loginflag!: boolean;
+  userId!: number;
 
-  constructor() { 
-    if(localStorage.getItem("userinfo")!=null){
-      this.loginflag=true;
-      this.userId=JSON.parse(localStorage.getItem("userinfo")!).userName;
+  constructor() {
+    if (localStorage.getItem("userinfo") != null) {
+      this.loginflag = true;
+      this.userId = JSON.parse(localStorage.getItem("userinfo")!).userName;
     }
   }
 }

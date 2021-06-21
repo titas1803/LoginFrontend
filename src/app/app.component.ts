@@ -11,15 +11,17 @@ import { StorageService } from './storage.service';
 export class AppComponent {
   title = 'angular-login-module';
 
-  constructor(public loginService:LoginService, public storageService:StorageService, public router:Router){}
+  constructor(public loginService: LoginService, public storageService: StorageService, public router: Router) { }
 
-  doLogout():void{
+  doLogout(): void {
     this.loginService.doLogout().subscribe(
-      data=>{localStorage.removeItem("userinfo");
-      this.storageService.msg=data.msg;
-      this.storageService.loginflag=false;
-      this.router.navigateByUrl("/login");}
+      data => {
+        localStorage.removeItem("userinfo");
+        this.storageService.msg = data.msg;
+        this.storageService.loginflag = false;
+        this.router.navigateByUrl("/login");
+      }
     )
 
-    }
+  }
 }

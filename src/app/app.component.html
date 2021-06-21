@@ -1,8 +1,8 @@
-<header class="jumbotron bg-warning mb-2 pb-2">
-  <h1>Angular Login Module</h1>
-  <h5>By Titas Sarkar and Soumendu Maitra</h5>
+<header class="jumbotron mb-2 pb-2" style="background-color: rgb(56, 56, 56);">
+  <h1 class="text-white">Angular Login Module</h1>
+  <h5 class="text-warning">By Titas Sarkar and Soumendu Maitra</h5>
   <div class="col-10 text-right" *ngIf="!storageService.loginflag"><a routerLink="/login"
-      class="btn btn-outline-secondary" style="cursor:pointer">Login</a></div>
+      class="btn btn-outline-secondary text-white border border-light" style="cursor:pointer">Login</a></div>
   <div class="col-10 text-right" *ngIf="storageService.loginflag">
     <span class="text-dark">Hi, {{storageService.userId|number}}, </span>
     <a (click)="doLogout()" class="btn btn-outline-secondary" style="cursor:pointer">Logout</a>
@@ -11,13 +11,20 @@
 <article>
   <nav class="col-8 mx-auto px-0">
     <ul class="nav nav-tabs" role="tablist">
-      <li><a role="tab" href="#prod" data-toggle="tab" routerLink='product' class="nav-link bg-warning text-white">Products</a></li>
-      <li><a role="tab" href="#user" data-toggle="tab" routerLink='user' class="nav-link bg-warning text-white">Users</a></li>
+      <li><a role="tab" href="#prod" data-toggle="tab" routerLink='product'
+          class="nav-link border border-light btn text-white text-center"
+          style="width: 110px; background-color: rgb(135, 181, 255);">Products</a></li>
+      <li><a role="tab" href="#user" data-toggle="tab" routerLink='user'
+          class="nav-link border border-light btn text-white text-center"
+          style="width: 110px;  background-color: rgb(135, 181, 255);">Users</a></li>
       <li><a role="tab" href="#create" data-toggle="tab" routerLink='createaccount'
-          class="nav-link active bg-warning text-white">Sign Up</a></li>
+          class="nav-link active border border-light btn text-white text-center"
+          style="width: 110px;  background-color: rgb(135, 181, 255);">Sign Up</a></li>
     </ul>
   </nav>
-  <div class="card card-body bg-info col-8 mx-auto p-1">
+  <div class="card card-body col-8 mx-auto p-1" style="background-color: rgb(199, 227, 255);">
     <router-outlet class="tab-content bg-info"></router-outlet>
   </div>
 </article>
+
+<!-- 146, 193, 240 -->
