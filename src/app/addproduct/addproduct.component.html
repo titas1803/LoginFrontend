@@ -1,0 +1,32 @@
+<section class="col-6 mx-auto p-1 m-1 card card-primary" id="addid">
+  <div class="alert " *ngIf="msg!=undefined" ngClass="{'alert-success':msgflag,'alert-danger':!msgflag}">{{msg}}</div>
+  <form #frm='ngForm' (ngSubmit)="add()">
+
+    <div>Product ID</div>
+    <div><input type="number" class="form-control" name="txtid" [(ngModel)]='prod.prodId' #pcost="ngModel" required/></div>
+    <div *ngIf="pid.invalid && pid.touched" class="alert alert-danger">ID is mandatory</div>
+
+    
+
+    <div>Product Name</div>
+    <div><input type="text" class="form-control" name="txtname" [(ngModel)]='prod.prodName' #pname="ngModel" required pattern="^[A-Za-z\s]{1,}[A-Za-z\s]{0,}$"/></div>
+    <div *ngIf="pname.invalid && pname.touched" class="alert alert-danger">
+      <div *ngIf="pname.errors.required">Product Name is required</div>
+      <div *ngIf="pname.errors.pattern">Product name must contain alphabets and can have space in between</div>
+    </div>
+
+    <div>Product Cost</div>
+    <div><input type="text" class="form-control" name="txtcost" [(ngModel)]='prod.prodCost' #pcost="ngModel" required/></div>
+    <div *ngIf="pcost.invalid && pcost.touched" class="alert alert-danger">Cost is mandatory</div>
+
+    <div>Add Image</div>
+    <form>
+      <input type="file" id="myfile" name="filename"/>
+      <input type="submit"/>
+    </form>
+
+
+    <input type="submit" value="addemployee" [disabled]="!frm.valid"/>
+  </form>
+ 
+</section>

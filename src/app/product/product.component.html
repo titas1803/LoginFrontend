@@ -1,9 +1,10 @@
-<article class="col-12 mx-auto" [ngStyle]='{height:"400px"}'>
-  <section class="col-6 bg-info p-2 m-2 mx-auto">
+<article class="col-12 mx-auto " [ngStyle]='{height:"600px"}'>
+  <section class="row col-6 bg-info p-2 m-2 mx-auto justify-content-center">
     <div><input type="button" class="btn btn-warning m-2" value="viewProdByID" routerLink="prodbyid" /></div>
     <div><input type="button" class="btn btn-warning m-2" value="viewProdByNAME" routerLink="prodbyname"/></div>
+    <div><input type="button" class="btn btn-warning m-2" value="addProoduct" routerLink="addproduct"/></div>
   </section>
-  <section class="col-6 p-2 m-2 mx-auto">
+  <section class="col-6 p-2 m-2 mx-auto text-center">
     <h2>View Products</h2>
     <router-outlet></router-outlet>
   </section>

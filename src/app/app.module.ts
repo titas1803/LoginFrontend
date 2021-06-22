@@ -13,6 +13,7 @@ import { ViewprodbyIdComponent } from './viewprodby-id/viewprodby-id.component';
 import { ViewprodbyNameComponent } from './viewprodby-name/viewprodby-name.component';
 import { ViewalluserComponent } from './viewalluser/viewalluser.component';
 import { ViewuserbyNameComponent } from './viewuserby-name/viewuserby-name.component';
+import { AddproductComponent } from './addproduct/addproduct.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ViewuserbyNameComponent } from './viewuserby-name/viewuserby-name.compo
     ViewprodbyIdComponent,
     ViewprodbyNameComponent,
     ViewalluserComponent,
-    ViewuserbyNameComponent
+    ViewuserbyNameComponent,
+    AddproductComponent
   ],
   imports: [
     BrowserModule,
