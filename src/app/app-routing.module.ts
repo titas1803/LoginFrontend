@@ -12,12 +12,12 @@ import { ViewuserbyNameComponent } from './viewuserby-name/viewuserby-name.compo
 const routes: Routes = [{path:"createaccount", component:CreateAccountComponent},
                         {path:"login", component:LoginComponent},
                         {path:"product", component:ProductComponent, children:[
-                          {path:"prodbyid/:pid", component:ViewprodbyIdComponent},
-                          {path:"prodbyname/:pname", component:ViewprodbyNameComponent}
+                          {path:"prodbyid", component:ViewprodbyIdComponent},
+                          {path:"prodbyname", component:ViewprodbyNameComponent}
                         ]},
                         {path:"user",component:UserComponent, children:[
                           {path:"viewalluser", component:ViewalluserComponent},
-                          {path:"userbyname/:uname", component:ViewuserbyNameComponent}
+                          {path:"userbyname", component:ViewuserbyNameComponent}
                         ]}];
 
 @NgModule({
