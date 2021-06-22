@@ -17,7 +17,7 @@ const routes: Routes = [{path:"createaccount", component:CreateAccountComponent}
                         ]},
                         {path:"user",component:UserComponent, children:[
                           {path:"viewalluser", component:ViewalluserComponent},
-                          {path:"userbyname", component:ViewuserbyNameComponent}
+                          {path:"userbyname/:uname", component:ViewuserbyNameComponent}
                         ]}];
 
 @NgModule({

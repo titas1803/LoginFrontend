@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserDto } from '../user-dto';
 import { UserService } from '../user.service';
 
@@ -16,7 +17,7 @@ export class CreateAccountComponent implements OnInit {
   msgflag!:boolean
   confPass:string;
 
-  constructor(public userService:UserService) { }
+  constructor(public userService:UserService, public router:Router) { }
 
   ngOnInit() {
   }
@@ -32,6 +33,7 @@ export class CreateAccountComponent implements OnInit {
         console.log(data);
         this.msg=data.msg;
         this.msgflag=true;
+        this.router.navigateByUrl("/login");
       },
       error=>{
         console.log(error);
