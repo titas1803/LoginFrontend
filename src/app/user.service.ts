@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { UserDto } from './user-dto';
@@ -23,4 +23,17 @@ export class UserService {
     }
     return str;
   }
+
+  viewAll():Observable<any>{
+    let token: string = JSON.parse(localStorage.getItem("userinfo")!).token;
+    return this.http.get("http://localhost:8082/loginmodule/viewusers", { headers: new HttpHeaders({ 'token-id': token }) });
+  }
+  
+  viewbyname(userName:string):Observable<any>{
+    let token: string = JSON.parse(localStorage.getItem("userinfo")!).token;
+    return this.http.get("http://localhost:8082/loginmodule/viewusersbyname"+userName, { headers: new HttpHeaders({ 'token-id': token }) });
+  }
+
+
+
 }

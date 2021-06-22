@@ -7,12 +7,12 @@ export class StorageService {
 
   msg?: string;
   loginflag!: boolean;
-  userId!: number;
+  userName!: string;
 
   constructor() {
     if (localStorage.getItem("userinfo") != null) { 
       this.loginflag = true;
-      this.userId = JSON.parse(localStorage.getItem("userinfo")!).userName;
+      this.userName = JSON.parse(localStorage.getItem("userinfo")!).userName;
     }
   }
 }

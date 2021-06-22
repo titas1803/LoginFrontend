@@ -4,8 +4,8 @@
   <div class="col-10 text-right" *ngIf="!storageService.loginflag"><a routerLink="/login"
       class="btn btn-outline-secondary text-white border border-light" style="cursor:pointer">Login</a></div>
   <div class="col-10 text-right" *ngIf="storageService.loginflag">
-    <span class="text-dark">Hi, {{storageService.userId|number}}, </span>
-    <a (click)="doLogout()" class="btn btn-outline-secondary" style="cursor:pointer">Logout</a>
+    <span class="text-light">Hi, {{storageService.userName|titlecase}}, </span>
+    <a (click)="doLogout()" class="btn btn-outline-secondary text-white" style="cursor:pointer">Logout</a>
   </div>
 </header>
 <article>

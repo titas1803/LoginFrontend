@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
       data=>{
       localStorage.setItem("userinfo", JSON.stringify(data));
       this.storageservice.loginflag=true;
-      this.storageservice.userId=JSON.parse(localStorage.getItem("userinfo")!).userId;
+      this.storageservice.userName=JSON.parse(localStorage.getItem("userinfo")!).userName;
       this.storageservice.msg=undefined;
       this.router.navigateByUrl("/");
       },
