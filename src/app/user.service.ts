@@ -12,7 +12,8 @@ export class UserService {
   constructor(public http:HttpClient) { }
 
   createAccount(userdto:UserDto):Observable<any>{
-    return this.http.post("http://localhost:8082/loginmodule/createuser", userdto);
+    console.log("in create");
+    return this.http.post<UserDto>("http://localhost:8082/loginmodule/createuser", userdto);
   }
 
   encryptString(pwd:string):string{
