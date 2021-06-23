@@ -1,0 +1,7 @@
+li{
+    width: 110px;
+    background-color: rgb(135, 181, 255);
+}
+.navbtn:active, .navbtn:focus, .navbtn:visited{
+    background-color: rgb(96, 173, 250);
+}

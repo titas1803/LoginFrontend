@@ -1,31 +1,31 @@
 <section class="col-8 mx-auto p-1 m-1 card card-primary bg-warning" id="addid">
   <h2 class="text-center">Add New Product</h2>
   <div class="alert border-0 alert-success" *ngIf="msg!=undefined" ngClass="{'alert-success':msgflag,'alert-danger':!msgflag}">{{msg}}</div>
-  <form #frm='ngForm' (ngSubmit)="add()">
+  <form #frm='ngForm' (ngSubmit)="add()" >
 
-    <div>Product ID</div>
-    <div><input type="number" class="form-control" name="txtid" [(ngModel)]='prod.prodId' #pid="ngModel" required/></div>
+    <div class="py-1">Product ID</div>
+    <div class="py-1"><input type="number" class="form-control" name="txtid" [(ngModel)]='prod.prodId' #pid="ngModel" required/></div>
     <div class="alert alert-danger" *ngIf="pid.invalid && pid.touched" class="alert alert-danger">ID is mandatory</div>
 
     
 
-    <div>Product Name</div>
-    <div><input type="text" class="form-control" name="txtname" [(ngModel)]='prod.prodName' #pname="ngModel" required /></div>
+    <div class="py-1">Product Name</div>
+    <div class="py-1"><input type="text" class="form-control" name="txtname" [(ngModel)]='prod.prodName' #pname="ngModel" required /></div>
     <div class="alert alert-danger" *ngIf="pname.invalid && pname.touched" class="alert alert-danger">
       <div  *ngIf="pname.errors.required">Product Name is required</div>
       <div *ngIf="pname.errors.pattern">Product name must contain alphabets and can have space in between</div>
     </div>
 
-    <div>Product Cost</div>
-    <div><input type="text" class="form-control" name="txtcost" [(ngModel)]='prod.prodCost' #pcost="ngModel" required/></div>
+    <div class="py-1">Product Cost</div>
+    <div class="py-1"><input type="text" class="form-control" name="txtcost" [(ngModel)]='prod.prodCost' #pcost="ngModel" required/></div>
     <div class="alert alert-danger" *ngIf="pcost.invalid && pcost.touched" class="alert alert-danger">Cost is mandatory</div>
 
-    <div>Add Image</div>
-    <div><input type="text" name="txtimg" class="form-control" [(ngModel)]='prod.prodImg' #pimage="ngModel" required/></div>
+    <div class="py-1">Add Image URL</div>
+    <div class="py-1"><input type="text" name="txtimg" class="form-control" [(ngModel)]='prod.prodImg' #pimage="ngModel" required/></div>
     <div class="alert alert-danger" *ngIf="pimage.invalid && pimage.touched" class="alert alert-danger">Image is mandatory</div>
 
 
-    <input type="submit" value="Add Product" [disabled]="!frm.valid"/>
+    <input type="submit" value="Add Product" [disabled]="!frm.valid" class="py-1"/>
   </form>
  
 </section>

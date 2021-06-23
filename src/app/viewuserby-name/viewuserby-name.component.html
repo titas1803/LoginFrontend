@@ -15,12 +15,11 @@
                   <th>Date of Birth</th>
                   <th>Address</th>
                   <th>Location</th>
-                  <!-- <th>Role</th> -->
               </tr>
           </thead>
           <tbody>
               <tr *ngFor="let u of userArray">
-                  <td>{{u.userId | number}}</td>
+                  <td id="uid">{{u.userId | number}}</td>
                   <td>{{u.userName | titlecase}}</td>
                   <td>{{u.contactNo}}</td>
                   <td>{{u.emailId}}</td>

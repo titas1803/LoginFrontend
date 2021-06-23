@@ -1,0 +1,13 @@
+@media only screen and (max-width: 400px) {
+
+    thead, tfoot {
+        display: none;
+    }
+
+    th, td {
+        display: block;
+    }
+    #uid{
+        font-weight: bold;
+    }
+}

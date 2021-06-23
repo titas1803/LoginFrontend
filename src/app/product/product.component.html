@@ -1,11 +1,10 @@
-<article class="col-10 mx-auto " [ngStyle]='{height:"800px"}'>
+<article class="col-10 mx-auto " [ngStyle]='{"min-height":"200px"}'>
   <section class="row  bg-info p-2 m-2 mx-auto justify-content-center">
     <div><input type="button" class="btn btn-warning m-2" value="View Product By  ID" routerLink="prodbyid" /></div>
     <div><input type="button" class="btn btn-warning m-2" value="View Product By NAME" routerLink="prodbyname"/></div>
     <div><input type="button" class="btn btn-warning m-2" value="Add Product" routerLink="addproduct"/></div>
   </section>
   <section class="col-12 p-2 m-2 mx-auto text-center">
-    
     <router-outlet></router-outlet>
   </section>
 </article>
