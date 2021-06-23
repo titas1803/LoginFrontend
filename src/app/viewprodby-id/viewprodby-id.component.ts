@@ -28,7 +28,7 @@ msg:string;
       },
       error=>{
         console.log(error);
-        this.msg=error.error.message;
+        this.msg=error.error.msg;
         this.products=undefined;
       }
     )
