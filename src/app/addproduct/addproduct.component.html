@@ -20,7 +20,8 @@
     <div *ngIf="pcost.invalid && pcost.touched" class="alert alert-danger">Cost is mandatory</div>
 
     <div>Add Image</div>
-    <div><input type="file" id="myfile" name="filename" class="form-control" [(ngModel)]='prod.prodImg'/></div>
+    <div><input type="text" name="txtimg" class="form-control" [(ngModel)]='prod.prodImg' #pimage="ngModel" required/></div>
+    <div *ngIf="pimage.invalid && pimage.touched" class="alert alert-danger">Cost is mandatory</div>
 
 
     <input type="submit" value="Add Product" [disabled]="!frm.valid"/>

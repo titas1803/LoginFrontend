@@ -22,18 +22,18 @@ form:NgForm;
   add():void{
     console.log("In add method");
     console.log(this.prod.prodImg);
-    // this.prodservice.addproduct(this.prod).subscribe(
-    //   data=>{
-    //     console.log(data);
-    //     this.msg=data.message;
-    //     this.form.reset;
-    //     this.msgflag=true;
-    //   },
-    //   error=>{
-    //     console.log(error);
-    //     this.msg=error.error.message[0];
-    //     this.msgflag=false;
-    //   }
-    // )
+    this.prodservice.addproduct(this.prod).subscribe(
+      data=>{
+        console.log(data);
+        this.msg=data.message;
+        this.form.reset;
+        this.msgflag=true;
+      },
+      error=>{
+        console.log(error);
+        this.msg=error.error.message[0];
+        this.msgflag=false;
+      }
+    )
   }
 }

@@ -21,6 +21,7 @@ export class ProductServiceService {
   }
 
   addproduct(prod:ProdDto):Observable<any>{
+    console.log("In Add Product");
     return this.http.post("http://localhost:8082/loginmodule/addproduct",prod);
   }
 }
