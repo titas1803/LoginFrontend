@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
+import { LoginGuard } from './login.guard';
 import { LoginComponent } from './login/login.component';
 import { ProductComponent } from './product/product.component';
 import { UserComponent } from './user/user.component';
@@ -12,12 +13,12 @@ import { ViewuserbyNameComponent } from './viewuserby-name/viewuserby-name.compo
 
 const routes: Routes = [{path:"createaccount", component:CreateAccountComponent},
                         {path:"login", component:LoginComponent},
-                        {path:"product", component:ProductComponent, children:[
+                        {path:"product", component:ProductComponent, canActivate:[LoginGuard], children:[
                           {path:"addproduct", component: AddproductComponent },
                           {path:"prodbyid", component:ViewprodbyIdComponent},
                           {path:"prodbyname", component:ViewprodbyNameComponent}
                         ]},
-                        {path:"user",component:UserComponent, children:[
+                        {path:"user",component:UserComponent, canActivate:[LoginGuard], children:[
                           {path:"viewalluser", component:ViewalluserComponent},
                           {path:"userbyname", component:ViewuserbyNameComponent}
                         ]}];
