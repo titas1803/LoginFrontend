@@ -31,9 +31,6 @@ export class UserService {
   
   viewbyname(userName:string):Observable<any>{
     let token: string = JSON.parse(localStorage.getItem("userinfo")!).token;
-    return this.http.get("http://localhost:8082/loginmodule/viewusersbyname"+userName, { headers: new HttpHeaders({ 'token-id': token }) });
+    return this.http.get("http://localhost:8082/loginmodule/viewusersbyname/"+userName, { headers: new HttpHeaders({ 'token-id': token }) });
   }
-
-
-
 }

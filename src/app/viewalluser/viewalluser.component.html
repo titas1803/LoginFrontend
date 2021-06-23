@@ -15,14 +15,14 @@
               </tr>
           </thead>
           <tbody>
-              <tr *ngFor="let e of userArray">
-                  <td>{{e.userId | number}}</td>
-                  <td>{{e.userName | titlecase}}</td>
-                  <td>{{e.contactNo}}</td>
-                  <td>{{e.emailId}}</td>
-                  <td>{{e.userdob | date}}</td>
-                  <td>{{e.useraddress}}</td>
-                  <td>{{e.location | titlecase}}</td>
+              <tr *ngFor="let u of userArray">
+                  <td>{{u.userId | number}}</td>
+                  <td>{{u.userName | titlecase}}</td>
+                  <td>{{u.contactNo}}</td>
+                  <td>{{u.emailId}}</td>
+                  <td>{{u.userdob | date}}</td>
+                  <td>{{u.useraddress}}</td>
+                  <td>{{u.location | titlecase}}</td>
                   <!-- <td>{{e.role | uppercase}}</td> -->
 
                   <!-- <td><input type="button" value="Remove" class="btn btn-danger" routerLink="/deleteemp/{{e.empId}}">

@@ -4,22 +4,22 @@
   </div>
   <section>
     <div *ngIf="msg!=undefined" class="alert alert-danger">{{msg}}</div>
-    <table class="table table-primary table-striped" *ngIf="Products!=undefined">
+    <table class="table table-primary table-striped" *ngIf="products!=undefined">
       <tr>
         <td>Product ID</td>
-        <td>{{Products.prodId}}</td>
+        <td>{{products.prodId}}</td>
       </tr>
       <tr>
         <td>Product Name</td>
-        <td>{{Products.prodName | titlecase}}</td>
+        <td>{{products.prodName | titlecase}}</td>
       </tr>
       <tr>
         <td>Product Cost</td>
-        <td>{{Products.prodCost}}</td>
+        <td>{{products.prodCost}}</td>
       </tr>
       <tr>
         <td>Product Image</td>
-        <td>{{Products.prodImg}}</td>
+        <td>{{products.prodImg}}</td>
       </tr>
     </table>
   </section>
