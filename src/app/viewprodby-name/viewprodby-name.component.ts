@@ -10,7 +10,7 @@ import { ProductServiceService } from '../product-service.service';
 export class ViewprodbyNameComponent implements OnInit {
 
   prodname:string;
-  product:ProdDto[]=[];
+  product:ProdDto[]=undefined;
   msg:string;
   currentPage:number=1;
   productarray:any[]=[];
@@ -21,6 +21,7 @@ export class ViewprodbyNameComponent implements OnInit {
   }
 
   viewbyname(){
+    this.product=undefined;
     this.prodservice.viewbyname(this.prodname).subscribe(
       data=>{
       console.log(data);
