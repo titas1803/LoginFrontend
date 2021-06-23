@@ -15,6 +15,10 @@ export class ProductServiceService {
     let token: string = JSON.parse(localStorage.getItem("userinfo")!).token;
     return this.http.get("http://localhost:8082/loginmodule/viewprodbyid/"+pid,{ headers: new HttpHeaders({ 'token-id': token }) });
   }
+  viewbyname(pname:string):Observable<any>{
+    let token: string = JSON.parse(localStorage.getItem("userinfo")!).token;
+    return this.http.get("http://localhost:8082/loginmodule/viewprodsbyname/"+pname, { headers: new HttpHeaders({ 'token-id': token }) });
+  }
 
   addproduct(prod:ProdDto):Observable<any>{
     return this.http.post("http://localhost:8082/loginmodule/addproduct",prod);
