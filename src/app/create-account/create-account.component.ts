@@ -33,7 +33,7 @@ export class CreateAccountComponent implements OnInit {
         console.log(data);
         this.msg=data.msg;
         this.msgflag=true;
-        this.router.navigateByUrl("/login");
+        // this.router.navigateByUrl("/login");
       },
       error=>{
         console.log(error);
