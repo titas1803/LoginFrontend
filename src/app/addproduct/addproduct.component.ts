@@ -25,13 +25,13 @@ form:NgForm;
     this.prodservice.addproduct(this.prod).subscribe(
       data=>{
         console.log(data);
-        this.msg=data.message;
+        this.msg=data.msg;
         this.form.reset;
         this.msgflag=true;
       },
       error=>{
         console.log(error);
-        this.msg=error.error.message[0];
+        this.msg=error.error.msg;
         this.msgflag=false;
       }
     )
