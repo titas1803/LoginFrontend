@@ -1,6 +1,6 @@
 <section class="col-8 mx-auto p-1 m-1 card card-primary bg-warning" id="addid">
   <h2 class="text-center">Add New Product</h2>
-  <div class="alert border-0 alert-success" *ngIf="msg!=undefined" ngClass="{'alert-success':msgflag,'alert-danger':!msgflag}">{{msg}}</div>
+  <div class="alert border-0 alert-success" *ngIf="msg!=undefined" [ngClass]="{'alert-success':msgflag,'alert-danger':!msgflag}">{{msg}}</div>
   <form #frm='ngForm' (ngSubmit)="add()" >
 
     <div class="py-1">Product ID</div>
