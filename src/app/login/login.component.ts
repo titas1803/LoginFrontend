@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   constructor(public storageservice:StorageService, public loginService:LoginService, public router:Router) { }
 
   ngOnInit() {
+    this.storageservice.msg=undefined;
   }
 
   doLogin():void{
