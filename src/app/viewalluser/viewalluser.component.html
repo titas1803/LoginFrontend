@@ -17,12 +17,12 @@
           </thead>
           <tbody>
               <tr *ngFor="let u of userArray">
-                  <td  id="uid">{{u.userId | number}}</td>
+                  <td  id="uid">{{u.userId}}</td>
                   <td>{{u.userName | titlecase}}</td>
                   <td>{{u.contactNo}}</td>
                   <td>{{u.emailId}}</td>
                   <td>{{u.userdob | date}}</td>
-                  <td>{{u.useraddress}}</td>
+                  <td>{{u.useraddress | titlecase}}</td>
                   <td>{{u.location | titlecase}}</td>
                   <!-- <td>{{e.role | uppercase}}</td> -->
 

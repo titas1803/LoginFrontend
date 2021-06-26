@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserDto } from '../user-dto';
 import { UserService } from '../user.service';
@@ -16,6 +16,7 @@ export class CreateAccountComponent implements OnInit {
   form!:NgForm;
   msgflag!:boolean
   confPass:string;
+  passflag:boolean=undefined;
 
   constructor(public userService:UserService, public router:Router) { }
 

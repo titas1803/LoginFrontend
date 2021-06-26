@@ -1,0 +1,9 @@
+h2{
+    font-family: 'Monoton', cursive;
+}
+#loginform{
+    transition: transform .8s;
+}
+#loginform:hover{
+    transform: scale(1.1);
+}

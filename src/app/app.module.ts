@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { ProductComponent } from './product/product.component';
 import { UserComponent } from './user/user.component';
@@ -14,6 +14,7 @@ import { ViewprodbyNameComponent } from './viewprodby-name/viewprodby-name.compo
 import { ViewalluserComponent } from './viewalluser/viewalluser.component';
 import { ViewuserbyNameComponent } from './viewuserby-name/viewuserby-name.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
+import { PasswordMatchDirective } from './password-match.directive';
 
 @NgModule({
   declarations: [
@@ -26,13 +27,15 @@ import { AddproductComponent } from './addproduct/addproduct.component';
     ViewprodbyNameComponent,
     ViewalluserComponent,
     ViewuserbyNameComponent,
-    AddproductComponent
+    AddproductComponent,
+    PasswordMatchDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

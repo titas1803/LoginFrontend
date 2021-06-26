@@ -1,7 +1,27 @@
-li{
-    width: 110px;
-    background-color: rgb(135, 181, 255);
+article{
+    width: 67%;
 }
-.navbtn:active, .navbtn:focus, .navbtn:visited{
-    background-color: rgb(96, 173, 250);
+.navbtn, .navbtn:visited {
+    width: 110px;
+    background-color: rgb(75, 132, 179);
+}
+.navbtn:hover{
+    background-color: rgb(81, 148, 202);
+}
+.navbtn:focus, .navbtn:active{
+    background-color: rgb(73, 161, 248) !important;
+}
+#outlet{
+    /* width: 67%; */
+    background-color: rgb(128, 204, 248);
+}
+
+@media only screen and (max-width: 400px) {
+    article{
+        width: 80%;
+    }
+    .navbtn{
+        width: 120%;
+        text-align: left !important;
+    }
 }

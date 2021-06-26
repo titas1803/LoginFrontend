@@ -1,0 +1,24 @@
+section{
+    width: 50%;
+    background-color: rgba(2, 85, 186, 0.3);
+    border-radius: 2%;
+}
+#head{
+    /* font-family: 'Luckiest Guy', cursive; */
+    /* font-family: 'Monoton', cursive; */
+    font-family: 'Bungee', cursive;
+}
+form div label{
+    font-weight: bold;
+}
+/* #submit{
+    margin: 2, auto;
+} */
+@media only screen and (max-width: 400px) {
+    section{
+        width: 85%;
+    }
+    .col{
+        flex-basis: auto;
+    }
+}

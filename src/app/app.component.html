@@ -8,19 +8,19 @@
     <a (click)="doLogout()" class="btn btn-outline-secondary text-white" style="cursor:pointer">Logout</a>
   </div>
 </header>
-<article>
-  <nav class="col-8 mx-auto px-0">
+<article class="mx-auto">
+  <nav class="mx-auto px-0">
     <ul class="nav nav-tabs" role="tablist">
-      <li><a role="tab" href="#prod" data-toggle="tab" routerLink='product'
-          class="nav-link border border-light btn text-white text-center navbtn">Products</a></li>
-      <li><a role="tab" href="#user" data-toggle="tab" routerLink='user'
-          class="nav-link border border-light btn text-white text-center navbtn">Users</a></li>
-      <li><a role="tab" href="#create" data-toggle="tab" routerLink='createaccount'
-          class="nav-link border border-light btn text-white text-center navbtn">Sign Up</a></li>
+      <li class="nav-item"><a role="tab" href="#prod" data-toggle="tab" routerLink='product'
+          class="nav-link border border-light text-white text-center navbtn">Products</a></li>
+      <li class="nav-item"><a role="tab" href="#user" data-toggle="tab" routerLink='user'
+          class="nav-link border border-light text-white text-center navbtn">Users</a></li>
+      <li class="nav-item"><a role="tab" href="#create" data-toggle="tab" routerLink='createaccount'
+          class="nav-link border border-light text-white text-center navbtn">Sign Up</a></li>
     </ul>
   </nav>
-  <div class="card card-body col-8 mx-auto p-1" style="background-color: rgb(199, 227, 255);">
-    <router-outlet class="tab-content bg-info"></router-outlet>
+  <div class="card card-body mx-auto p-1" id="outlet">
+    <router-outlet class="tab-content"></router-outlet>
   </div>
 </article>
 

@@ -1,31 +1,31 @@
-<section class="col-4 mx-auto">
-  <!--<div class="alert alert-danger">
-    You are not Authenticate/Authorized to accesss
-  </div>-->
-  <h2 class="text-center">Login</h2>
-  <div *ngIf="storageservice.msg != undefined" class="alert alert-warning">
-      {{ storageservice.msg }}
-  </div>
-  <form #frm="ngForm" (ngSubmit)="doLogin()">
-      <div class="py-2">
-      <div class="py-1">User Id</div>
-      <div>
-          <input type="text" name="txtname" [(ngModel)]="login.userId" #loginuid="ngModel" required class="form-control" />
-      </div>
-      <div class="alert alert-danger" *ngIf="loginuid.invalid && loginuid.touched">
-          UserId is Required
-      </div>
-  </div>
+<section class="col-4 mx-auto shadow-lg p-3 m-5 bg-white rounded" id="loginform">
+    <h2 class="text-center">Login</h2>
+    <div *ngIf="storageservice.msg != undefined" class="alert alert-warning">
+        {{ storageservice.msg }}
+    </div>
+    <form #frm="ngForm" (ngSubmit)="doLogin()">
+        <div class="py-2">
+            <div class="py-1">User Id</div>
+            <div>
+                <input type="text" name="txtname" [(ngModel)]="login.userId" #loginuid="ngModel" required
+                    class="form-control" placeholder="enter User Id" />
+            </div>
+            <div class="alert alert-danger mb-0" *ngIf="loginuid.invalid && loginuid.touched">
+                UserId is Required
+            </div>
+        </div>
 
-      <div class="py-2">
-      <div class="py-1">Password</div>
-      <div>
-          <input type="password" name="txtpwd" [(ngModel)]="login.password" #loginpwd="ngModel" required class="form-control" />
-      </div>
-      <div class="alert alert-danger" *ngIf="loginpwd.invalid && loginpwd.touched">
-          Password is required
-      </div>
-      </div>
-      <div><input type="submit" class="btn btn-danger"  value="login" [disabled]="!frm.valid" /></div>
-  </form>
+        <div class=" my-1">
+            <div class="py-1">Password</div>
+            <div>
+                <input type="password" name="txtpwd" [(ngModel)]="login.password" #loginpwd="ngModel" required
+                    class="form-control" placeholder="enter password" />
+            </div>
+            <div class="alert alert-danger mb-0" *ngIf="loginpwd.invalid && loginpwd.touched">
+                Password is required
+            </div>
+        </div>
+        <div class="my-3 justify-content-center"><input type="submit" class="btn btn-danger" value="login"
+                [disabled]="!frm.valid" /></div>
+    </form>
 </section>
