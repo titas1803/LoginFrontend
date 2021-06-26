@@ -10,15 +10,15 @@
      <table class="table table-primary table-striped" *ngFor="let products of productarray">
         <tr >
             <td rowspan="3"><img src="{{products.prodImg}}" alt="IMAGE" height="200" width="200"></td>
-        <td>Product ID</td>
+        <td style="font-family: 'Courier New', Courier, monospace;">Product ID</td>
         <td>{{products.prodId}}</td>
       </tr>
       <tr >
-        <td>Product Name</td>
+        <td style="font-family: 'Courier New', Courier, monospace;">Product Name</td>
         <td>{{products.prodName | titlecase}}</td>
       </tr>
       <tr >
-        <td>Product Cost</td>
+        <td style="font-family: 'Courier New', Courier, monospace;">Product Cost</td>
         <td>{{products.prodCost}}</td>
       </tr>
       
