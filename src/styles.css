@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-/* body{
-    background: -webkit-linear-gradient(left, #6D80EA, #6D8AEE, #6C95F1, #6C9FF5, #6BA9F8, #6BB4FC, #6ABEFF);
-    background-color: #002042;
-} */
+body{
+    /* background-color: rgb(194, 234, 242); */
+    background-image: url("assets/images/designbig.jpg");
+    background-size: cover;
+}

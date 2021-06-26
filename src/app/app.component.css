@@ -34,6 +34,7 @@ header div h1{
 }
 #outlet{
     background-color: #D0EEFF;
+    /* background-color: rgb(173, 212, 240); */
 }
 
 @media only screen and (max-width: 30em) {

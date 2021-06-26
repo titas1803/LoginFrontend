@@ -1,6 +1,9 @@
 .btn{
     width: 170px;
 }
+#vud{
+    font-family: 'Abril Fatface', cursive;
+}
 @media only screen and (max-width: 400px) {
     .btn{
         display: block;

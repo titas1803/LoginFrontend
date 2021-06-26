@@ -15,11 +15,11 @@
       </tr>
     </table>
   </div>
-  <div id="login">
-    <div class="col-10 text-right" *ngIf="!storageService.loginflag"><a routerLink="/login"
+  <div id="login" class="col-11">
+    <div class=" text-right" *ngIf="!storageService.loginflag"><a routerLink="/login"
         class="btn btn-outline-secondary text-white border border-light">Login</a></div>
-    <div class="col-10 text-right" *ngIf="storageService.loginflag">
-      <span class="text-light">Hi, {{storageService.userName|titlecase}}. </span>
+    <div class="text-right" *ngIf="storageService.loginflag">
+      <span class="text-light">Hi, {{storageService.userName|titlecase}} </span>
       <a (click)="doLogout()" class="btn btn-outline-secondary text-white">Logout</a>
     </div>
   </div>

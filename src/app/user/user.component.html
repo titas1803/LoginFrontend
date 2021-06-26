@@ -1,13 +1,13 @@
-<article id="view" class="bg-info p-1 m-2 tab-pane active rounded">
+<article id="view" class="p-1 m-2 tab-pane active rounded">
   
-  <section class="row bg-info p-1 mx-auto justify-content-center">
+  <section class="row bg-info p-1 mx-auto justify-content-center rounded">
       <!-- <div><input type="button" value="View all" class="btn btn-warning mx-2" routerLink="/viewemp"></div> -->
-      <div><input type="button" value="View Users by Name" class="btn btn-warning m-1 px-2"  routerLink="userbyname"></div>
-      <div><input type="button" value="View All Users" class="btn btn-warning m-1 px-2"  routerLink="viewalluser"></div>
+      <div><input type="button" value="View Users by Name" class="btn btn-warning m-2 px-2"  routerLink="userbyname"></div>
+      <div><input type="button" value="View All Users" class="btn btn-warning m-2 px-2"  routerLink="viewalluser"></div>
   </section>
   <section class="alert alert-success mx-auto col-3" *ngIf="this.userService.msg!=undefined">{{this.userService.msg}}</section>
   <section class="mx-auto text-center" >
-    <h2>View User Details</h2>
+    <h2 id="vud">View User Details</h2>
     <router-outlet></router-outlet>
   </section>
 </article>
