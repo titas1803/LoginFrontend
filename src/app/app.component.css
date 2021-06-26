@@ -36,12 +36,18 @@ header div h1{
     background-color: #D0EEFF;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 30em) {
+/* @media all and (max-width: 30em) { */
     .article{
         width: 80%;
     }
     .navbtn{
-        width: 120%;
+        border: 1px solid white;
+        width: 100%;
         text-align: left !important;
+        margin: 0px !important;
+        /* display: block;
+        width: 20;
+        margin: 0.4em auto; */
     }
 }
