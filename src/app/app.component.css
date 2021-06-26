@@ -1,3 +1,24 @@
+header{
+    background-color: #002042;
+}
+/* #name{
+    padding: 10px 20px;
+    margin: 0px;
+    padding-top: 20px;
+    display: inline-block;
+} */
+#logo{
+    display: inline-block;
+    padding: 0px 20px;
+    /* border: 1px solid whitesmoke; */
+    border-radius: 12px;
+}
+header div h1{
+    color: #D0EEFF;
+}
+#login{
+    cursor: pointer;
+}
 .article{
     width: 67%;
 }
@@ -12,7 +33,7 @@
     background-color: rgb(73, 161, 248) !important;
 }
 #outlet{
-    background-color: rgb(128, 204, 248);
+    background-color: #D0EEFF;
 }
 
 @media only screen and (max-width: 400px) {

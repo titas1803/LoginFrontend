@@ -1,6 +1,7 @@
 section{
     width: 50%;
-    background-color: rgba(2, 85, 186, 0.3);
+    background-color: rgb(25, 67, 115);
+    /* background-color: #0B2440; */
     border-radius: 2%;
 }
 #head{
@@ -9,6 +10,7 @@ section{
     font-family: 'Bungee', cursive;
 }
 form div label{
+    color: aliceblue;
     font-weight: bold;
 }
 /* #submit{

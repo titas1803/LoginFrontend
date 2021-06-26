@@ -1,22 +1,38 @@
-<header class="jumbotron mb-2 pb-2" style="background-color: rgb(56, 56, 56);">
-  <h1 class="text-white">Login Module</h1>
-  <h5 class="text-warning">Using ANGULAR</h5>
-  <div class="col-10 text-right" *ngIf="!storageService.loginflag"><a routerLink="/login"
-      class="btn btn-outline-secondary text-white border border-light" style="cursor:pointer">Login</a></div>
-  <div class="col-10 text-right" *ngIf="storageService.loginflag">
-    <span class="text-light">Hi, {{storageService.userName|titlecase}}, </span>
-    <a (click)="doLogout()" class="btn btn-outline-secondary text-white" style="cursor:pointer">Logout</a>
+<header class="jumbotron mb-2 pb-2">
+  <div id="logo">
+    <table>
+      <tr>
+        <td rowspan="2" class="px-1"><img src="assets/images/angular_whiteTransparent.png" alt="logo" width="110"
+            height="110"></td>
+        <!-- <div id="name"> -->
+        <td>
+          <h1>Login Module</h1>
+        </td>
+      </tr>
+      <tr>
+        <h5 class="text-warning">Using ANGULAR</h5>
+        <!-- </div> -->
+      </tr>
+    </table>
+  </div>
+  <div id="login">
+    <div class="col-10 text-right" *ngIf="!storageService.loginflag"><a routerLink="/login"
+        class="btn btn-outline-secondary text-white border border-light">Login</a></div>
+    <div class="col-10 text-right" *ngIf="storageService.loginflag">
+      <span class="text-light">Hi, {{storageService.userName|titlecase}}. </span>
+      <a (click)="doLogout()" class="btn btn-outline-secondary text-white">Logout</a>
+    </div>
   </div>
 </header>
 <article class="mx-auto article">
   <nav class="mx-auto px-0">
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item"><a role="tab" href="#prod" data-toggle="tab" routerLink='product'
-          class="nav-link border border-light text-white text-center navbtn">Products</a></li>
+          class="nav-link mr-1 text-white text-center navbtn">Products</a></li>
       <li class="nav-item"><a role="tab" href="#user" data-toggle="tab" routerLink='user'
-          class="nav-link border border-light text-white text-center navbtn">Users</a></li>
+          class="nav-link text-white text-center navbtn">Users</a></li>
       <li class="nav-item"><a role="tab" href="#create" data-toggle="tab" routerLink='createaccount'
-          class="nav-link border border-light text-white text-center navbtn">Sign Up</a></li>
+          class="nav-link ml-1 text-white text-center navbtn">Sign Up</a></li>
     </ul>
   </nav>
 
