@@ -8,7 +8,7 @@
     <a (click)="doLogout()" class="btn btn-outline-secondary text-white" style="cursor:pointer">Logout</a>
   </div>
 </header>
-<article class="mx-auto">
+<article class="mx-auto article">
   <nav class="mx-auto px-0">
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item"><a role="tab" href="#prod" data-toggle="tab" routerLink='product'
@@ -19,6 +19,7 @@
           class="nav-link border border-light text-white text-center navbtn">Sign Up</a></li>
     </ul>
   </nav>
+
   <div class="card card-body mx-auto p-1" id="outlet">
     <router-outlet class="tab-content"></router-outlet>
   </div>
