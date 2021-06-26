@@ -1,6 +1,6 @@
-<div class="col-8 mx-auto p-2 m-2">
-  <h2  style="font-family: 'Times New Roman', Times, serif;">VIEW BY ID</h2>
-  <input type="number" placeholder="Enter Product ID" [(ngModel)]="pid" class="form-control" />
+<div>
+   <h2  >VIEW BY ID</h2>
+  <input type="number" placeholder="Enter Product ID" [(ngModel)]="pid" />
   <input type="button" value="Search" (click)="viewbyid()" class="btn btn-info" />
 </div>
 <section>
@@ -9,15 +9,15 @@
     <table class="table table-primary table-striped" >
       <tr>
         <td rowspan="3"><img src={{products.prodImg}} alt="Image" height="200" width="200" /></td>
-        <td style="font-family: 'Courier New', Courier, monospace;">Product ID</td>
-        <td>{{products.prodId}}</td>
+        <td style="font-family: Georgia, 'Times New Roman', Times, serif;">Product ID</td>
+        <td id="pid">{{products.prodId}}</td>
       </tr>
       <tr>
-        <td  style="font-family: 'Courier New', Courier, monospace;">Product Name</td>
+        <td  style="font-family: Georgia, 'Times New Roman', Times, serif;">Product Name</td>
         <td>{{products.prodName | titlecase}}</td>
       </tr>
       <tr>
-        <td style="font-family: 'Courier New', Courier, monospace;">Product Cost</td>
+        <td style="font-family: Georgia, 'Times New Roman', Times, serif;">Product Cost</td>
         <td >{{products.prodCost}}</td>
       </tr>
 
