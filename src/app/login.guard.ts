@@ -21,8 +21,8 @@ export class LoginGuard implements CanActivate {
       this.storageService.msg = undefined;
       return true;
     }
-    this.router.navigateByUrl('/login');
     this.storageService.msg = 'You are not Authenticated/Authorized to access';
+    this.router.navigateByUrl('/login');
     return false;
   }
 }

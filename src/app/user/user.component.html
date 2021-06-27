@@ -1,5 +1,5 @@
 <article id="view" class="p-1 m-2 tab-pane active rounded">
-  
+  <h2 id="vud" class="text-center">View User Details</h2>
   <section class="row bg-info p-1 mx-auto justify-content-center rounded">
       <!-- <div><input type="button" value="View all" class="btn btn-warning mx-2" routerLink="/viewemp"></div> -->
       <div><input type="button" value="View Users by Name" class="btn btn-warning m-2 px-2"  routerLink="userbyname"></div>
@@ -7,7 +7,7 @@
   </section>
   <section class="alert alert-success mx-auto col-3" *ngIf="this.userService.msg!=undefined">{{this.userService.msg}}</section>
   <section class="mx-auto text-center" >
-    <h2 id="vud">View User Details</h2>
+    
     <router-outlet></router-outlet>
   </section>
 </article>
