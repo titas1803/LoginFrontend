@@ -1,14 +1,21 @@
-.btn{
-    width: 200px;
+.btn {
+  width: 200px;
+}
+
+#wps {
+  height: 50px;
+  font-family: 'Suez One', serif;
 }
 @media only screen and (max-width: 400px) {
-    section{
-        width: 85%;
-    }
-    
-    .btn{
-        display: block;
-        /* width: 100%; */
-        margin:0.4em auto;
-    }
+  section {
+    width: 85%;
+  }
+
+  .btn {
+    display: block;
+    margin: 0.4em auto;
+  }
+  h2 {
+    font-size: 20px;
+  }
 }

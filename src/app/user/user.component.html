@@ -1,7 +1,6 @@
-<article id="view" class="p-1 m-2 tab-pane active rounded">
-  <h2 id="vud" class="text-center">View User Details</h2>
-  <section class="row bg-info p-1 mx-auto justify-content-center rounded">
-      <!-- <div><input type="button" value="View all" class="btn btn-warning mx-2" routerLink="/viewemp"></div> -->
+<article id="view" class="p-1 tab-pane active rounded" [ngStyle]='{"min-height":"100px"}'>
+  <h2 id="vud" class="text-center">View Users Details</h2>
+  <section class="row  bg-info p-1 m-2 justify-content-center rounded">
       <div><input type="button" value="View Users by Name" class="btn btn-warning m-2 px-2"  routerLink="userbyname"></div>
       <div><input type="button" value="View All Users" class="btn btn-warning m-2 px-2"  routerLink="viewalluser"></div>
   </section>

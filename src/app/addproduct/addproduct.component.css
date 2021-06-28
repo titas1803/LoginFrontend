@@ -1,0 +1,36 @@
+section {
+  width: 67%;
+  background-color: rgb(37, 60, 102);
+}
+#head {
+  background-color: rgb(196, 231, 245);
+  font-family: "Bungee", cursive;
+  border-radius: 3px;
+}
+form label {
+  font-weight: bold;
+  color: white;
+  font-size: x-large;
+  font-family: "Courier New", Courier, monospace;
+}
+#submit {
+  font-family: "Courier New", Courier, monospace;
+  color: black;
+  font-weight: bold;
+  font-size: x-large;
+}
+@media only screen and (max-width: 400px) {
+    section{
+        width: 90%;
+    }
+    h2{
+        font-size: 30px;
+    }
+    form label{
+        font-size: large;
+
+    }
+    #submit{
+        font-size: medium;
+    }
+}

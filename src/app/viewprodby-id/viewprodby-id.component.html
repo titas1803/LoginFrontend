@@ -1,23 +1,28 @@
 <div>
    <h2  >VIEW BY ID</h2>
-  <input type="number" placeholder="Enter Product ID" [(ngModel)]="pid" />
+   <div class="form-row justify-content-center">
+  <input type="number" placeholder="Enter Product ID" [(ngModel)]="pid" class="form-control mx-2" id="pidin"/>
   <input type="button" value="Search" (click)="viewbyid()" class="btn btn-info" />
+</div>
 </div>
 <section>
   <div *ngIf="msg!=undefined" class="alert alert-danger">{{msg}}</div>
   <div *ngIf="products!=undefined">
-    <table class="table table-primary table-striped" >
+    <table class="table table-primary table-striped table-hover" >
       <tr>
-        <td rowspan="3"><img src={{products.prodImg}} alt="Image" height="200" width="200" /></td>
-        <td style="font-family: Georgia, 'Times New Roman', Times, serif;">Product ID</td>
+        <td rowspan="4"><img src={{products.prodImg}} alt="Image" height="200" width="200" /></td>
+      </tr>
+      <tr>
+        
+        <td class="table-row">Product ID</td>
         <td id="pid">{{products.prodId}}</td>
       </tr>
       <tr>
-        <td  style="font-family: Georgia, 'Times New Roman', Times, serif;">Product Name</td>
+        <td class="table-row">Product Name</td>
         <td>{{products.prodName | titlecase}}</td>
       </tr>
       <tr>
-        <td style="font-family: Georgia, 'Times New Roman', Times, serif;">Product Cost</td>
+        <td class="table-row">Product Cost</td>
         <td >{{products.prodCost}}</td>
       </tr>
 

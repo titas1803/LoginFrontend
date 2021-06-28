@@ -74,12 +74,11 @@
     <div>
       <label for="txtrole" class="mb-2"> Role</label>
       <select name="txtrole" class="form-control custom-select mb-2" required [(ngModel)]="userDto.role"
-        #role="ngModel">
+        #role="ngModel" title="Select Role">
         <option value="user">User</option>
         <option value="admin">Admin</option>
       </select>
       <div class="alert alert-danger" *ngIf="role.invalid && role.touched">select a role.</div>
-      <!-- <div class="mb-4"><input type="text" name="txtrole" class="form-control" [(ngModel)]="userDto.role" required #role="ngModel"/></div> -->
     </div>
     <div class="justify-content-center"><input type="submit" class="btn btn-success text-white" value="Add Employee"
         [disabled]="!frm.valid"></div>

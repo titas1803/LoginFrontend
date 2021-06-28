@@ -2,7 +2,8 @@
     width: 170px;
 }
 #vud{
-    font-family: 'Abril Fatface', cursive;
+    height: 50px;
+    font-family: 'Suez One', serif;
 }
 @media only screen and (max-width: 400px) {
     .btn{

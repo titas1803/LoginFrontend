@@ -1,26 +1,30 @@
-section{
-    width: 50%;
-    background-color: rgb(25, 67, 115);
-    /* background-color: #0B2440; */
-    border-radius: 2%;
+section {
+  width: 50%;
+  background-color: rgb(25, 67, 115);
+  /* background-color: #0B2440; */
+  border-radius: 8px;
 }
-#head{
-    /* font-family: 'Luckiest Guy', cursive; */
-    /* font-family: 'Monoton', cursive; */
-    font-family: 'Bungee', cursive;
+#head {
+  font-family: "Bungee", cursive;
 }
-form div label{
-    color: aliceblue;
-    font-weight: bold;
+form div label {
+  color: aliceblue;
+  font-weight: bold;
 }
 /* #submit{
     margin: 2, auto;
 } */
-@media only screen and (max-width: 400px) {
-    section{
+/* @media only screen and (max-width: 400px) {
+  
+} */
+@media only screen and (max-width: 700px) {
+    section {
         width: 85%;
-    }
-    .col{
-        flex-basis: auto;
-    }
+      }
+      #head {
+        font-size: 35px;
+      }
+  .col {
+    flex-basis: auto;
+  }
 }
