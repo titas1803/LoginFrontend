@@ -13,13 +13,14 @@ export class ViewalluserComponent implements OnInit {
   msg?:string
   currentPage:number=1;
   userArray:any[]=[];
-  totalPages!:number;
+  totalPages:number=1;
   constructor(public userService:UserService) { }
 
   ngOnInit() {
     this.userService.viewAll().subscribe(data=>{
       console.log(data);
       this.users=data;
+      this.users.sort((a,b)=>a.userId-b.userId);
       this.msg=undefined;
       let endrow=this.currentPage*3;
       let startrow=endrow-3;

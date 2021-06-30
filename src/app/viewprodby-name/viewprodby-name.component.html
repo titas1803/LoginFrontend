@@ -1,32 +1,37 @@
 <div>
-    <h2>View By Name</h2>
-  <input type="text" name="txtname" placeholder="Enter Name" [(ngModel)]="prodname">
-  <input type="button" value="search" (click)="viewbyname()" >
+  <h2>View By Name</h2>
+  <div class="form-row justify-content-center">
+    <input type="text" placeholder="Enter Product Name" [(ngModel)]="prodname" class="form-control mx-2" id="pnamein"/>
+    <input type="button" value="Search" (click)="viewbyname()" class="btn btn-info" />
+  </div>
 </div>
-<section>
-    <div *ngIf="msg!=undefined" class="alert alert-danger">{{msg}}</div>
-    <div  *ngIf="product!=undefined">
-      
-     <table class="table table-primary table-striped" *ngFor="let products of productarray">
-        <tr >
-            <td rowspan="3"><img src="{{products.prodImg}}" alt="IMAGE" height="200" width="200"></td>
-        <td style="font-family: Georgia, 'Times New Roman', Times, serif;">Product ID</td>
+<section class="mx-auto my-2">
+  <div *ngIf="msg!=undefined" class="alert alert-danger">{{msg}}</div>
+  <div *ngIf="product!=undefined">
+    <table
+      class="table table-primary table-striped table-hover border border-primary rounded mx-auto justify-content-center"
+      *ngFor="let products of productarray">
+      <tr>
+        <td rowspan="4"><img src="{{products.prodImg}}" alt="IMAGE" height="200" width="200"></td>
+      </tr>
+      <tr>
+        <td class="table-row">Product ID</td>
         <td id="pid">{{products.prodId}}</td>
       </tr>
-      <tr >
-        <td style="font-family: Georgia, 'Times New Roman', Times, serif;">Product Name</td>
+      <tr>
+        <td class="table-row">Product Name</td>
         <td>{{products.prodName | titlecase}}</td>
       </tr>
-      <tr >
-        <td style="font-family: Georgia, 'Times New Roman', Times, serif;">Product Cost</td>
-        <td>{{products.prodCost}}</td>
+      <tr>
+        <td class="table-row">Product Cost</td>
+        <td>{{products.prodCost | currency:'INR'}}</td>
       </tr>
-      
-     </table>
-     <section class="row mx-auto justify-content-center">
-        <button class="page-link mx-1 btn" (click)="previous()" [disabled]="currentPage==1">Prev</button>
-        <button class="page-link mx-1 btn" (click)="next()" [disabled]="currentPage==totalPages">Next</button>
+
+    </table>
+    <section class="row mx-auto justify-content-center">
+      <button class="page-link mx-1 btn" (click)="previous()" [disabled]="currentPage==1">Prev</button>
+      <button class="page-link mx-1 btn" (click)="next()" [disabled]="currentPage==totalPages">Next</button>
     </section>
-    </div>
-    
-  </section>
+  </div>
+
+</section>

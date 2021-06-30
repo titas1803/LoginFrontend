@@ -19,7 +19,7 @@ export class PasswordMatchDirective implements Validator {
     if(controlToCompare && controlToCompare.value!== control.value){
       return {'notEqual': true};
     }
-    return {'notEqual': false};
+    return null;
   }
 
 }

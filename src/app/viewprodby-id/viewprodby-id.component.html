@@ -5,10 +5,10 @@
   <input type="button" value="Search" (click)="viewbyid()" class="btn btn-info" />
 </div>
 </div>
-<section>
+<section class=" mx-auto my-2 ">
   <div *ngIf="msg!=undefined" class="alert alert-danger">{{msg}}</div>
   <div *ngIf="products!=undefined">
-    <table class="table table-primary table-striped table-hover" >
+    <table class="table table-primary table-striped table-hover border border-primary rounded" >
       <tr>
         <td rowspan="4"><img src={{products.prodImg}} alt="Image" height="200" width="200" /></td>
       </tr>
@@ -23,7 +23,7 @@
       </tr>
       <tr>
         <td class="table-row">Product Cost</td>
-        <td >{{products.prodCost}}</td>
+        <td >{{products.prodCost | currency: 'INR'}}</td>
       </tr>
 
     </table>

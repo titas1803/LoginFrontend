@@ -1,6 +1,9 @@
 #pidin {
   width: 25%;
 }
+section{
+  width: 67%;
+}
 .table-row {
   font-family: Georgia, "Times New Roman", Times, serif;
 }

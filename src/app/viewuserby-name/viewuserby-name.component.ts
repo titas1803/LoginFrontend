@@ -14,7 +14,7 @@ export class ViewuserbyNameComponent implements OnInit {
   msg?:string
   currentPage:number=1;
   userArray:any[]=[];
-  totalPages!:number;
+  totalPages:number=1;
   constructor(public userService:UserService) { }
 
   ngOnInit() {   
@@ -24,6 +24,7 @@ export class ViewuserbyNameComponent implements OnInit {
     this.userService.viewbyname(this.userName).subscribe(data=>{
       console.log(data);
       this.users=data;
+      this.users.sort((a,b)=>a.userName.localeCompare(b.userName));
       this.msg=undefined;
       let endrow=this.currentPage*3;
       let startrow=endrow-3;
@@ -49,6 +50,4 @@ export class ViewuserbyNameComponent implements OnInit {
     let startrow=endrow-3;
     this.userArray=this.users.slice(startrow, endrow);
   }
-
-
 }

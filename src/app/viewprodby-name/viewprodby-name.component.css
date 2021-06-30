@@ -1,3 +1,12 @@
+section{
+    width: 67%;
+  }
+  #pnamein {
+    width: 25%;
+  }
+  .table-row{
+      font-family:  Georgia, 'Times New Roman', Times, serif;
+  }
 @media only screen and (max-width: 400px) {
 
     thead, tfoot {
@@ -10,4 +19,7 @@
     #pid{
         font-weight: bold;
     }
+    #pnamein {
+        width: 50%;
+      }
 }
