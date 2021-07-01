@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AddproductComponent } from './addproduct/addproduct.component';
+import { ChangepassComponent } from './changepass/changepass.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { LoginGuard } from './login.guard';
 import { LoginComponent } from './login/login.component';
@@ -21,7 +22,10 @@ const routes: Routes = [{path:"createaccount", component:CreateAccountComponent}
                         {path:"user",component:UserComponent, canActivate:[LoginGuard], children:[
                           {path:"viewalluser", component:ViewalluserComponent},
                           {path:"userbyname", component:ViewuserbyNameComponent}
-                        ]}];
+                        ]},
+                        {path:"changepass", component:ChangepassComponent, canActivate:[LoginGuard]}
+
+                      ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

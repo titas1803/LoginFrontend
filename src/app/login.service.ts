@@ -20,6 +20,12 @@ export class LoginService {
     return this.http.get("http://localhost:8082/loginmodule/logout", { headers: new HttpHeaders({ 'token-id': token }) });
   }
 
+  changePassword(login:LoginDto):Observable<any>{
+    let token:string=JSON.parse(localStorage.getItem("userinfo")!).token;
+    console.log(token);
+    return this.http.post("http://localhost:8082/loginmodule/changepassword", login, {headers: new HttpHeaders({'token-id':token})});
+  }
+
   encryptString(pwd: string): string {
     let str: string = "";
     for (let idx = 0; idx < pwd.length; idx++) {

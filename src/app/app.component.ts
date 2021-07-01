@@ -21,6 +21,6 @@ export class AppComponent {
         this.storageService.loginflag = false;
         this.router.navigateByUrl("/login");
       }
-    )
+    );
   }
 }

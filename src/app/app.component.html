@@ -15,33 +15,39 @@
       </tr>
     </table>
   </div>
-  <div id="login" class="col-11">
+  <div class="justify-content-right text-right col-md-10">
     <div class=" text-right" *ngIf="!storageService.loginflag"><a routerLink="/login"
-        class="btn bg-warning">Login</a></div>
-    <div class="text-right" *ngIf="storageService.loginflag">
-      <span class="text-light">Hi, {{storageService.userName|titlecase}} </span>
-      <a (click)="doLogout()" class="btn btn-outline-danger text-white">Logout</a>
+        class="btn bg-warning login">Login</a></div>
+    <div *ngIf="storageService.loginflag">
+      <!-- <span class="text-light">Hi, {{storageService.userName|titlecase}} </span>
+      <a (click)="doLogout()" class="btn btn-outline-danger text-white login">Logout</a> -->
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle text-white " type="button" data-toggle="dropdown"> Hi,
+          {{storageService.userName|titlecase}}
+          <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li class="p-1"><a routerLink='changepass' class="btn btn-link">Change Password</a></li>
+          <li class="p-1"><a (click)="doLogout()" class="btn btn-link" routerLink='login'>Log Out</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </header>
 <article class="mx-auto article">
   <nav class="mx-auto px-0">
     <ul class="nav nav-tabs" role="tablist list">
-      <li class="nav-item"><a role="tab" href="#prod" data-toggle="tab" routerLink='product'
+      <li class="nav-item"><a role="tab" data-toggle="tab" routerLink='product'
           class="nav-link mr-1 text-white text-center navbtn">Products</a></li>
-      <li class="nav-item"><a role="tab" href="#user" data-toggle="tab" routerLink='user'
+      <li class="nav-item"><a role="tab" data-toggle="tab" routerLink='user'
           class="nav-link text-white text-center navbtn">Users</a></li>
-      <li class="nav-item"><a role="tab" href="#create" data-toggle="tab" routerLink='createaccount'
+      <li class="nav-item"><a role="tab" data-toggle="tab" routerLink='createaccount'
           class="nav-link ml-1 text-white text-center navbtn">Sign Up</a></li>
     </ul>
   </nav>
-
-  <div class="card card-body mx-auto p-1 mb-4" id="outlet">
-    <router-outlet class="tab-content py-2"></router-outlet>
+  <div id="outdiv">
+    <div class="card card-body mx-auto p-1 mb-4" id="outlet">
+      <router-outlet class="tab-content py-2"></router-outlet>
+    </div>
   </div>
 </article>
-
-<!-- <footer><h4>by Titas Sarkar & Soumendu Maitra</h4></footer> -->
-
-<!-- 146, 193, 240 -->
-<!-- style="width: 110px; background-color: rgb(135, 181, 255);" -->
+<footer class="text-center pb-2"> <small>©Created by Titas Sarkar & Soumendu Maitra</small></footer>

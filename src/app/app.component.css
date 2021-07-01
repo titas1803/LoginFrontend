@@ -9,7 +9,7 @@ header{
 header div h1{
     color: #D0EEFF;
 }
-#login{
+.login{
     cursor: pointer;
 }
 .article{
@@ -28,7 +28,9 @@ header div h1{
 #outlet{
     background-color: rgba(208, 238, 255, 0.6);
 }
-
+#outdiv{
+    min-height: 500px;
+}
 @media only screen and (max-width: 30em) {
     .article{
         width: 80%;

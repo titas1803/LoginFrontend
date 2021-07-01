@@ -1,0 +1,103 @@
+<div class="col-md-7 offset-md-3">
+  <span class="anchor" id="formChangePassword"></span>
+  <div class="card card-outline-secondary justify-content-center mx-auto mb-3">
+    <div class="card-header">
+      <h3 class="mb-0">Change Password</h3>
+    </div>
+
+    <div class="card-body">
+
+      <div *ngIf="storageservice.msg != undefined" class="alert alert-warning">
+        {{ storageservice.msg }}
+    </div>
+
+      <form
+        class="form"
+        role="form"
+        autocomplete="off"
+        (ngSubmit)="changepassword()"
+        #frm="ngForm"
+      >
+        <div class="form-group row">
+          <label for="txtuid" class="col-sm-2 col-form-label">User Id</label>
+          <div class="col-sm-10">
+            <input
+              type="text"
+              readonly
+              name="txtuid"
+              class="form-control"
+              id="txtuid"
+              value={{login.userId}}
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inputPasswordOld">Current Password</label>
+          <input
+            type="password"
+            class="form-control"
+            name="txtoldpass"
+            id="inputPasswordOld"
+            required
+            [(ngModel)]="login.password"
+            #oldpass="ngModel"
+          />
+          <div
+            class="alert alert-danger"
+            *ngIf="oldpass.invalid && oldpass.touched"
+          >
+            Old Password cant be empty
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inputPasswordNew">New Password</label>
+          <input
+            type="password"
+            class="form-control"
+            name="txtnewpass"
+            id="inputPasswordNew"
+            required=""
+            [(ngModel)]="login.newPassword"
+            #newpass="ngModel"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}"
+          />
+          <span class="form-text small text-muted">
+            must contain 8 to 20 characters that are of at least one number, and
+            one uppercase and lowercase letter must <em>not</em> contain spaces.
+          </span>
+          <div class="alert alert-danger" *ngIf="newpass.errors?.required && newpass.touched" > New Password cant be empty</div>
+          <div *ngIf="newpass.errors?.pattern && newpass.touched" class="text-danger">
+            <h6>Password pattern doesn't match</h6>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inputPasswordNewVerify">Verify</label>
+          <input
+            type="password"
+            class="form-control"
+            name="txtconfpass"
+            id="inputPasswordNewVerify"
+            [(ngModel)]="confPass"
+            #confpass="ngModel"
+            appPasswordMatch=txtnewpass
+            required
+          />
+          <span class="form-text small text-muted">
+            To confirm, type the new password again.
+          </span>
+          <div class="alert alert-danger" *ngIf="confpass.touched && confpass.errors?.required"> Confirm Password cant be empty</div>
+          <div class="alert alert-danger" *ngIf="confpass.touched && confpass.errors?.notEqual && !confpass.errors?.required">Confirm Password should be same as new password</div>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-success btn-lg float-right" [disabled]="!frm.valid">
+            Save
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

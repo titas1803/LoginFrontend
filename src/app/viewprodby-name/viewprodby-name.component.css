@@ -1,25 +1,29 @@
-section{
-    width: 67%;
+section {
+  width: 67%;
+}
+#pnamein {
+  width: 25%;
+}
+.table-row {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.pagi:disabled{
+    cursor: not-allowed;
+}
+@media only screen and (max-width: 400px) {
+  thead,
+  tfoot {
+    display: none;
+  }
+
+  th,
+  td {
+    display: block;
+  }
+  #pid {
+    font-weight: bold;
   }
   #pnamein {
-    width: 25%;
+    width: 50%;
   }
-  .table-row{
-      font-family:  Georgia, 'Times New Roman', Times, serif;
-  }
-@media only screen and (max-width: 400px) {
-
-    thead, tfoot {
-        display: none;
-    }
-
-    th, td {
-        display: block;
-    }
-    #pid{
-        font-weight: bold;
-    }
-    #pnamein {
-        width: 50%;
-      }
 }

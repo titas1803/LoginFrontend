@@ -21,12 +21,12 @@ export class LoginComponent implements OnInit {
 
   doLogin():void{
     this.login.password=this.loginService.encryptString(this.login.password);
-    // console.log(this.login.password);
     this.loginService.doLogin(this.login).subscribe(
       data=>{
       localStorage.setItem("userinfo", JSON.stringify(data));
       this.storageservice.loginflag=true;
       this.storageservice.userName=JSON.parse(localStorage.getItem("userinfo")!).userName;
+      this.storageservice.userId=JSON.parse(localStorage.getItem("userinfo")!).userId;
       this.storageservice.msg=undefined;
       this.router.navigateByUrl("/");
       },

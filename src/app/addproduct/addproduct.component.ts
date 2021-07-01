@@ -20,8 +20,6 @@ form:NgForm;
   }
 
   add():void{
-    console.log("In add method");
-    console.log(this.prod.prodImg);
     this.prodservice.addproduct(this.prod).subscribe(
       data=>{
         console.log(data);
@@ -34,6 +32,7 @@ form:NgForm;
         this.msg=error.error.msg;
         this.msgflag=false;
       }
-    )
+    );
+    this.form.reset();
   }
 }

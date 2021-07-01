@@ -15,6 +15,7 @@ import { ViewalluserComponent } from './viewalluser/viewalluser.component';
 import { ViewuserbyNameComponent } from './viewuserby-name/viewuserby-name.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { PasswordMatchDirective } from './password-match.directive';
+import { ChangepassComponent } from './changepass/changepass.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PasswordMatchDirective } from './password-match.directive';
     ViewalluserComponent,
     ViewuserbyNameComponent,
     AddproductComponent,
-    PasswordMatchDirective
+    PasswordMatchDirective,
+    ChangepassComponent
   ],
   imports: [
     BrowserModule,

@@ -1,13 +1,13 @@
-<article class=" mx-auto p-1 tab-pane active rounded" [ngStyle]='{"min-height":"100px"}'>
+<article class=" mx-auto p-1 tab-pane active rounded" [ngStyle]='{"min-height":"100px"}' id="prod">
   <section id="wps" class=" mx-auto text-center"> 
     <h2>Welcome to PRODUCT Section</h2>
   </section>
   <section class="row bg-info p-1 m-2 justify-content-center rounded">
-    <div><input type="button" class="btn btn-warning m-2" value="View Product By  ID" routerLink="prodbyid" /></div>
+    <div><input type="button" class="btn btn-warning m-2" value="View Product By ID" routerLink="prodbyid" /></div>
     <div><input type="button" class="btn btn-warning m-2" value="View Product By NAME" routerLink="prodbyname"/></div>
     <div><input type="button" class="btn btn-warning m-2" value="Add Product" routerLink="addproduct"/></div>
   </section>
-  <section class="m-2 mx-auto text-center">
+  <section class="mx-auto text-center">
     <router-outlet></router-outlet>
   </section>
 </article>
